@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -28,5 +29,7 @@ namespace WebApplication4.Data
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Uf { get; set; }
+
+        public ICollection<MesaUsuario> MesasUsuarios { get; set; }
     }
 }
